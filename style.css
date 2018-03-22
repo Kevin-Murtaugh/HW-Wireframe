@@ -1,4 +1,5 @@
-/* token change to enable add /commit /pushs  */
+/*- settings per instructions...   */
+/* took me awhile to realize that effectively everything needs to float (just to get the rest of the positioning started.  */
 
 body {
 	
@@ -11,6 +12,11 @@ body {
 	padding-bottom: 12px;
 	margin: auto;
 }
+
+/* order of precedence: margin/ border/ padding/ content/ padding/ border/ margin    */
+/* each can applied top & bottom /left & right                    */
+/* all colors per instructions   */
+
 
 header {
 	background: #ebebeb;
@@ -29,6 +35,9 @@ nav {
 	float: auto;
 }
 
+/* some of these settings could alost certainly be combined, omitted or done in simpler combinations.
+However, given the apparent temporary use of this code & short-term deadline, optimization will be deferred.  */
+
 section {
 	background: #ebebeb;
 	float: left;
@@ -37,6 +46,8 @@ section {
 	padding-top: 25px;
 	padding-bottom: 12px;
 }
+
+/* float:right was not ideal per lecture but seems to have worked out fine here... */
 
 aside {
 	background: #ebebeb;
@@ -54,7 +65,14 @@ footer {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	border-top:15px;
-/* adding this instruction per classroom lecture   */
+/* adding this instruction per classroom lecture.  notes implied a more complex "pseudo class" instruction needed.
+However, research found the single line "clear:both" would do the job.  Perhaps this is the underlying detail evoked?
+.clearfix:after {
+		content:""
+		display:block
+		clear:both
+		}
+		   */
 	clear: both;
 }
 
